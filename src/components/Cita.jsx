@@ -1,6 +1,6 @@
 export default function Cita() {
   return (
-    <div>
+    <div className="cita">
       <p>
         Mascota: <span></span>
       </p>
@@ -16,7 +16,7 @@ export default function Cita() {
       <p>
         Sintomas: <span></span>
       </p>
-      <button>Eliminar ×</button>
+      <button>Eliminar</button>
     </div>
   );
 }

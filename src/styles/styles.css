@@ -21,14 +21,16 @@ h2 {
   flex-direction: column;
 }
 
-.form {
+.form,
+.listado {
   padding: 50px;
   background-color: lightblue;
   border-radius: 10px;
   width: 30%;
 }
 
-.form input, .form textarea {
+.form input,
+.form textarea {
   border: none;
   outline: none;
   background-color: transparent;
@@ -43,16 +45,41 @@ h2 {
   font-weight: 600;
 }
 
-.form button{
-    all: unset;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
-    align-self: center;
-    margin-top: 10px;
+.form button {
+  all: unset;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 10px;
 }
 
-.form button:hover{
-    background-color: darkgray;
+.form button:hover {
+  background-color: darkgray;
+}
+
+.cita {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+}
+.cita p {
+  padding: 2%;
+}
+
+.cita button {
+  all: unset;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  margin: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cita button:hover {
+  background-color: #c84141;
 }
