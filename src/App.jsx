@@ -6,12 +6,12 @@ import "./styles/styles.css";
 function App() {
   return (
     <>
-      <h1>Administrador de pacientes</h1>
+      <h1>Administrador de citas medicas</h1>
       <hr />
       <div className="content">
         <Formulario />
         <Listado>
-          <Cita />
+          <Cita nombreMascota={"Tobi"} nombreDueno={"Monica Galindo"} fecha={new Date()} sintomas={"Le lele la pancha"}/>
           <Cita />
           <Cita />
         </Listado>
