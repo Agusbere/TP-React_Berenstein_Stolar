@@ -1,7 +1,13 @@
 import React from "react";
-import "../styles/input.css";
 
-export default function Input({ tipo, titulo, placeholder = titulo}) {
+export default function Input({
+  tipo,
+  titulo,
+  placeholder = titulo,
+  name,
+  value,
+  onChange
+}) {
   const PLACEHOLDERS = ["text", "password", "mail"];
   const TIENE_PLACEHOLDER = PLACEHOLDERS.includes(tipo);
   return (
@@ -11,9 +17,19 @@ export default function Input({ tipo, titulo, placeholder = titulo}) {
         <input
           type={tipo}
           placeholder={TIENE_PLACEHOLDER ? placeholder : undefined}
+          name={name}
+          value={value}
+          onChange={onChange}
         />
       ) : (
-        <textarea cols="30" rows="1" placeholder={placeholder} />
+        <textarea
+          cols="30"
+          rows="1"
+          placeholder={placeholder}
+          name={name}
+          value={value}
+          onChange={onChange}
+        />
       )}
     </>
   );

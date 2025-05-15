@@ -6,9 +6,11 @@ export default function Cita({
   nombreDueno = "No se pasó el nombre del dueño",
   fecha,
   sintomas = "No se pasaron los sintomas",
+  onEliminar
 }) {
   const FECHA = fecha?.toLocaleDateString() ?? "No se pasó fecha";
   const HORA = fecha?.toLocaleTimeString() ?? "No se pasó la hora";
+
   return (
     <div className="cita">
       <p>
@@ -26,7 +28,7 @@ export default function Cita({
       <p>
         Sintomas: <span>{sintomas}</span>
       </p>
-      <button>Eliminar</button>
+      <button onClick={onEliminar}>Eliminar</button>
     </div>
   );
 }
