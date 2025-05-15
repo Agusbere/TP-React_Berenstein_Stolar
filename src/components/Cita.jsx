@@ -1,3 +1,6 @@
+import React from "react";
+import "../styles/cita.css";
+
 export default function Cita({
   nombreMascota = "No se pasó el nombre de la mascota",
   nombreDueno = "No se pasó el nombre del dueño",

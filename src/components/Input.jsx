@@ -1,3 +1,6 @@
+import React from "react";
+import "../styles/input.css";
+
 export default function Input({ tipo, titulo, placeholder = titulo}) {
   const PLACEHOLDERS = ["text", "password", "mail"];
   const TIENE_PLACEHOLDER = PLACEHOLDERS.includes(tipo);

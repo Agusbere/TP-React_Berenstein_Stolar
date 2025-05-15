@@ -1,7 +1,11 @@
 import Formulario from "./components/Formulario";
 import Listado from "./components/Listado";
 import Cita from "./components/Cita";
-import "./styles/styles.css";
+import "./styles/cita.css";
+import "./styles/formulario.css";
+import "./styles/input.css";
+import "./styles/listado.css";
+import "./styles/app.css";
 
 function App() {
   return (

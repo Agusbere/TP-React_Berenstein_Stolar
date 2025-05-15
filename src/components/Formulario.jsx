@@ -1,5 +1,6 @@
 import Input from "./Input";
-
+import React from "react";
+import "../styles/formulario.css";
 export default function Formulario() {
   return (
     <div className="form">
