@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Formulario from "./components/Formulario";
 import Listado from "./components/Listado";
 import Cita from "./components/Cita";
@@ -9,15 +9,14 @@ import "./styles/listado.css";
 import "./styles/app.css";
 
 function App() {
-  const [citas, setCitas] = useState([
-    {
-      id: 1,
-      nombreMascota: "Tobi",
-      nombreDueno: "Monica Galindo",
-      fecha: new Date(),
-      sintomas: "Le lele la pancha",
-    },
-  ]);
+  const localCitas = localStorage.getItem("citas") || "[]";
+  const [citas, setCitas] = useState(JSON.parse(localCitas).map(e => {
+    return { ...e, fecha: new Date(e.fecha) }
+  }));
+
+  useEffect(() => {
+    localStorage.setItem("citas", JSON.stringify(citas));
+  }, [citas])
 
   const agregarCita = (nuevaCita) => {
     if (
